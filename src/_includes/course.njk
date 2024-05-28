@@ -1,19 +1,29 @@
+--- 
+layout: 'base' 
 ---
-layout: 'base'
----
+
+<h2>{{title}}</h2>
 
 {{content | safe}}
 
+{%-set courseContent = collections[courseCode] -%}
+
 <ul>
-    {%- for topic in collections.topic -%}
-        <li><a href="{{topic.url}}"><b>{{topic.data.title}}</b></a>
-            <ul>
-                {%- for page in collections.page -%}
-                {%- if topic.data.topicId == page.data.topicId -%}
+    {%- for topic in courseContent -%}
+    {%- if topic.data.tags.includes('topic') -%}
+        <li><a href="{{topic.url}}">{{topic.data.title}}</a>
+        <ul>
+            {% for page in courseContent %}
+            {% if page.data.tags.includes('page') and page.data.topicId == topic.data.topicId%}
                 <li><a href="{{page.url}}">{{page.data.title}}</a></li>
-                {%- endif -%}
-                {%- endfor -%}
-            </ul>
+            {% endif%}
+            {% endfor %}
+        </ul>
         </li>
+    {%- endif -%}
     {%- endfor -%}
 </ul>
+
+<br>
+
+<a href="../"><< back to home</a>

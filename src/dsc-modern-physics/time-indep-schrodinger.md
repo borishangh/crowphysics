@@ -1,6 +1,6 @@
 ---
 title: 'Time Independent Schrodinger Equation'
 topicId: 3
-layout: 'page'
+layout: 'topic'
 tags: ['topic']
 ---

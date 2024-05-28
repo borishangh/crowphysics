@@ -1,6 +1,6 @@
 ---
 title: 'The Schrodinger Equation'
 topicId: 2
-layout: 'page'
+layout: 'topic'
 tags: ['topic']
 ---
