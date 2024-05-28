@@ -1,0 +1,19 @@
+---
+layout: 'base'
+---
+
+{{content | safe}}
+
+<ul>
+    {%- for topic in collections.topic -%}
+        <li><a href="{{topic.url}}"><b>{{topic.data.title}}</b></a>
+            <ul>
+                {%- for page in collections.page -%}
+                {%- if topic.data.topicId == page.data.topicId -%}
+                <li><a href="{{page.url}}">{{page.data.title}}</a></li>
+                {%- endif -%}
+                {%- endfor -%}
+            </ul>
+        </li>
+    {%- endfor -%}
+</ul>

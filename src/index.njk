@@ -1,0 +1,12 @@
+--- 
+title: crow physics 
+layout: base 
+---
+
+<ul>
+    {%- for course in collections.course -%}
+        <li>
+            <a href="{{course.url}}">{{course.data.title}}</a>
+        </li>
+    {%- endfor -%}
+</ul>

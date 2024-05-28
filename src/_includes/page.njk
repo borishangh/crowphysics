@@ -1,0 +1,33 @@
+---
+layout: 'base'
+---
+
+<a href="../">back to course</a>
+
+<a id="top"></a>
+
+<h2>
+{{title}}
+</h2>
+
+<div class="page-links">
+    {%for page in collections.page%}
+    {%if page.data.pageId == (pageId-1) and page.data.topicId == topicId %}
+    <a href="{{page.url}}" class="prevlink"> << {{page.data.title}}</a>
+    
+    {%endif%}
+
+    {%if page.data.pageId == (pageId+1) and page.data.topicId == topicId %}
+    <a href="{{page.url}}" class="nextlink">{{page.data.title}} >> </a>
+    
+    {%endif%}
+    {%endfor%}
+</div>
+
+{{content | safe}}
+
+
+<a href="#top">Back to top</a>
+
+
+

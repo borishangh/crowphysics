@@ -1,0 +1,14 @@
+--- 
+layout: 'base' 
+---
+
+<h3>{{title}}</h3>
+<ul>
+    {%- for page in collections.page -%}
+        {%- if page.data.topicId == topicId -%}
+            <li>
+                <a href="{{page.url}}">{{page.data.title}}</a>
+            </li>
+        {%- endif -%}
+    {%- endfor -%}
+</ul>
