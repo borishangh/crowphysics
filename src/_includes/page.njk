@@ -2,24 +2,24 @@
 layout: 'base'
 ---
 
+<a id="top">
 <a href="../">back to course</a>
 
-<a id="top"></a>
 
-<h2>
-{{title}}
-</h2>
+<h2>{{title}}</h2>
 
 <div class="page-links">
-    {%for page in collections.page%}
+    {%for page in collections.page | sort(false, false, "data.pageId")%}
     {%if page.data.pageId == (pageId-1) and page.data.topicId == topicId and page.data.tags[0]==tags[0] %}
-    <a href="{{page.url}}" class="prevlink"> << {{page.data.title}}</a>
-    
+
+        <a href="{{page.url}}" class="prevlink"> << {{page.data.title}}</a>    
+
     {%endif%}
 
     {%if page.data.pageId == (pageId+1) and page.data.topicId == topicId and page.data.tags[0]==tags[0]%}
-    <a href="{{page.url}}" class="nextlink">{{page.data.title}} >> </a>
-    
+
+        <a href="{{page.url}}" class="nextlink">{{page.data.title}} >> </a>
+
     {%endif%}
     {%endfor%}
 </div>

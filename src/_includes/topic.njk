@@ -3,12 +3,12 @@ layout: 'base'
 ---
 <h3>{{title}}</h3>
 <ul>
-    {%- for page in collections.page -%}
-        {%- if page.data.topicId == topicId -%}
-            <li>
-                <a href="{{page.url}}">{{page.data.title}}</a>
-            </li>
-        {%- endif -%}
+    {%- for page in collections.page | sort(false, false, "data.pageId") -%}
+    {%- if page.data.topicId == topicId and page.data.tags[0] == tags[0] -%}
+
+        <li><a href="{{page.url}}">{{page.data.title}}</a></li>
+
+    {%- endif -%}
     {%- endfor -%}
 </ul>
 <br>
