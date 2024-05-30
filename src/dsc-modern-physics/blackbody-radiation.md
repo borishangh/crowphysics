@@ -129,5 +129,5 @@ $$
 
 ### References
 
-[1]: J. Crepeau, <a href = "https://webpages.uidaho.edu/~crepeau/ht2009-88060.pdf" target = "blank_">A Brief History of the $T^4$ Law</a>,  University of Idaho, 2009.
-[2]: N. Zettili, “Quantum Mechanics, Concepts and Applications,” Wiley, Chichester, 2001.
+- [1]: J. Crepeau, <a href = "https://webpages.uidaho.edu/~crepeau/ht2009-88060.pdf" target = "blank_">A Brief History of the $T^4$ Law</a>,  University of Idaho, 2009.
+- [2]: N. Zettili, “Quantum Mechanics, Concepts and Applications,” Wiley, Chichester, 2001.
