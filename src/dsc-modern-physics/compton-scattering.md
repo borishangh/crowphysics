@@ -74,12 +74,12 @@ Expand along both sides and cancel,
 $$
 \require{cancel}
 \begin{aligned}
-\cancel{h^2\nu^2} &- 2h^2\nu\nu' + \cancel{h^2\nu'^2} + 2h(\nu-\nu')m_ec^2 \\\\
-=& \cancel{h^2\nu^2} - 2h^2\nu\nu'\cos{\theta} + \cancel{h^2\nu'^2} \\\\
-\implies 2h(\nu-\nu')m_ec^2 =& \ 2h^2\nu\nu'(1-\cos{\theta})\\\\
-\implies (\frac{c}{\lambda}-\frac{c}{\lambda'})m_ec^2 =& \ \frac{hc^2}{\lambda\lambda'}(1-\cos{\theta})\\\\
-\implies {\lambda' - \lambda \over \lambda\lambda'}m_ec =& \ \frac{h}{\lambda\lambda'}(1-\cos{\theta})\\\\
-\implies \lambda' - \lambda  =& \ \frac{h}{m_ec}(1-\cos{\theta})\\\\
+\cancel{h^2\nu^2} - 2h^2\nu\nu' &+ \cancel{h^2\nu'^2} + 2h(\nu-\nu')m_ec^2 \\\\
+&= \cancel{h^2\nu^2} - 2h^2\nu\nu'\cos{\theta} + \cancel{h^2\nu'^2} \\\\
+\implies 2h(\nu-\nu')m_ec^2 &= 2h^2\nu\nu'(1-\cos{\theta})\\\\
+\implies (\frac{c}{\lambda}-\frac{c}{\lambda'})m_ec^2 &= \frac{hc^2}{\lambda\lambda'}(1-\cos{\theta})\\\\
+\implies {\lambda' - \lambda \over \lambda\lambda'}m_ec &= \frac{h}{\lambda\lambda'}(1-\cos{\theta})\\\\
+\implies \lambda' - \lambda  &= \frac{h}{m_ec}(1-\cos{\theta})\\\\
 \end{aligned}
 $$
 
