@@ -83,19 +83,6 @@ $$
 \end{aligned}
 $$
 
-<!-- $$
-\begin{aligned}
-h^2(\nu-\nu')^2 + 2h(\nu-\nu')m_ec^2 &= h^2(\nu^2 - 2\nu\nu'\cos{\theta} + \nu'^2) \\\\
-h^2(\nu^2-2\nu\nu'+\nu'^2) + 2h(\nu-\nu')m_ec^2 &= h^2(\nu^2 - 2\nu\nu'\cos{\theta} + \nu'^2) \\\\
-2h^2\nu\nu' + 2h(\nu-\nu')m_ec^2 &= 2h^2\nu\nu'\cos{\theta} \\\\
-(\nu-\nu')m_ec^2 &= h\nu\nu'(1-\cos{\theta}) \\\\
-(\frac{c}{\lambda}-\frac{c}{\lambda'})m_ec^2 &= h\frac{c^2}{\lambda\lambda'}(1-\cos{\theta}) \\\\
-({\lambda' - \lambda\over\lambda\lambda'})m_ec^2 &= h\frac{c}{\lambda\lambda'}(1-\cos{\theta}) \\\\
-(\lambda' - \lambda)m_ec^2 &= hc(1-\cos{\theta}) \\\\
-\lambda' - \lambda &= \frac{h}{m_ec}(1-\cos{\theta}) \\\\
-\end{aligned}
-$$ -->
-
 As the term $(1-\cos{\theta})$ is always positive, the outgoing photon always has the greater wavelength $\Delta \lambda > 0$,
 
 $$\boxed{\Delta \lambda = \frac{h}{m_ec}(1-\cos{\theta})}$$
