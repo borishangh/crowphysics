@@ -90,9 +90,18 @@ $$
 In terms of wavenumber, $k=2\pi/\lambda  = \pi n/L$. The magnitude squared of the wavevector having components $(k_x, k_y, k_z)$ is as follows,
 
 $$
-k^2 = k_x^2+k_y^2+k_z^2 = \frac{\pi^2n_x^2}{L^2} + \frac{\pi^2n_y^2}{L^2} + \frac{\pi^2n_z^2}{L^2}
-$$ or, 
-$$ n_x^2+n_y^2+n_z^2 = \frac{k^2L^2}{\pi^2} = \left(\frac{2\pi\nu}{c}\right)^2 \frac{L^2}{\pi^2} = \frac{4\nu^2L^2}{c^2}$$
+\begin{aligned}
+k^2 &= k_x^2+k_y^2+k_z^2 \\\\
+&= \frac{\pi^2n_x^2}{L^2} + \frac{\pi^2n_y^2}{L^2} + \frac{\pi^2n_z^2}{L^2}
+\end{aligned}
+$$ or,
+$$ 
+\begin{aligned}
+n_x^2+n_y^2 & + n_z^2 = \frac{k^2L^2}{\pi^2} \\\\
+&= \left(\frac{2\pi\nu}{c}\right)^2 \frac{L^2}{\pi^2} \\\\
+&= \frac{4\nu^2L^2}{c^2}
+\end{aligned}
+$$
 
 which is an equation of a sphere in coordinates $(n_x, n_y, n_z)$ with radius $2\nu L/c$. You can imagine this space representing all the possible wavevectors that would all satisfy the half-integer multiple condition. 
 
@@ -100,19 +109,19 @@ All the lattice points that lie on the sphere described above have frequency $\n
 This gives the volume,
 
 $$
-\left(\frac{1}{8}\right) \frac{4}{3} \pi \left(\frac{2\nu L}{c}\right)^3 = \frac{4}{3}\pi \frac{\nu^3L^3}{c^3} = \frac{4\pi\nu^3}{3c^3} \quad\text{(on setting L=1)}
+\left(\frac{1}{8}\right) \frac{4}{3} \pi \left(\frac{2\nu L}{c}\right)^3 = \frac{4}{3}\pi \frac{\nu^3L^3}{c^3}
 $$
 
-to find the number of modes lying in the interval $[\nu, \nu + d\nu]$ we can differentiate with respect to $\nu$, 
+Simply set $L=1$ and differentiate with respect to $\nu$ to find the number of modes lying in the interval $[\nu, \nu + d\nu]$,
 
 $$
 \frac{4\pi}{3c^3}(3\nu^2d\nu) = \frac{4\pi\nu^2}{c^3}d\nu
 $$
 
-Since, two polarization states exist for em waves, we multiply the above by 2 to arrive at our final expression for the number of states in a frequency interval per unit volume,
+Since two polarization states exist for every mode, we multiply the above by 2 to arrive at our final expression for the number of states in a frequency interval per unit volume,
 
 $$
-N(\nu) = \frac{8\pi\nu^2}{c^3}d\nu
+\boxed{N(\nu) = \frac{8\pi\nu^2}{c^3}d\nu}
 $$
 
 </div>

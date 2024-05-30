@@ -53,7 +53,7 @@ header a{
 }
 
 ul{
-    list-style: none;
+    margin-left: 20px;
 }
 
 ul ul{
@@ -83,12 +83,18 @@ h3, h4{
     margin: 10px 0;
 }
 
+#note{
+    color:#555;
+}
+
 #warn-block{
     border: 1px solid red;
     padding: 10px;
 }
 
 #emph-block{
-    border: 1px solid black;
+    border: 1px solid #999;
     padding: 10px;
+    margin: 20px;
+    width: fit-content;
 }

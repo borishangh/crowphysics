@@ -10,17 +10,26 @@ Compton Scattering is the phenomenon observed when high frequency photons come i
 
 In this example an incident photon with wavelength $\lambda$ gets scattered from an electron initially at rest. After collision the electron is deflected an angle $\phi$ below the x-axis and gains some speed $v$. The photon is simultaneously deflected an angle $\theta$ and now has the wavelength $\lambda'$.
 
+A few relations to keep in mind here are the energy of the photon $E = h\nu = hc/\lambda$ and the de Broglie relation $\lambda = h/p$.
+
+<div id="emph-block">
+<b>Proof Sketch</b>
+
+- Conserve momentum in both axes, find momentum of electron.
+- Conserve energy before and after collision, substitute momentum of electron and cancel terms.
+- Simplify the energy equation in terms of wavelength, find expression for $\Delta \lambda$
+
+</div>
+
+
 Conserving momentum along the x and y axes we have two equations.
 
 $$
 \begin{gather} 
-p = \ m_ev\cos{\phi} + p'\cos{\theta}
-\implies m_ev\cos{\phi} =  p- p'\cos{\theta} \\\\\
+p = \ m_ev\cos{\phi} + p'\cos{\theta} \\\\\
 m_ev\sin{\phi} = \ p'\sin{\theta} 
 \end{gather}
 $$
-
-Where $m_e$ is the rest mass of the electron. We know energy of the photon is $E = h\nu = hc/\lambda$ and through De Broglie's relation that $\lambda = h/p$. we can thus write, $p = h/\lambda$ and $p' = h/\lambda'$.
 
 Squaring the two equations and adding
 
@@ -29,24 +38,52 @@ $$
 m_e^2v^2 &= (p- p'\cos{\theta})^2 + p'^2\sin^2{\theta} \\\\\
 &= p^2 - 2pp'\cos{\theta} + p'^2\cos^2{\theta} + p'^2\sin^2{\theta} \\\\
 &= p^2 - 2pp'\cos{\theta} + p'^2 \\\\
-&= h^2(\frac{1}{\lambda^2} - \frac{2}{\lambda\lambda'}\cos{\theta} + \frac{1}{\lambda'^2}^2) \\\\
-m_e^2v^2c^2 &= h^2(\nu^2 - 2\nu\nu'\cos{\theta} + \nu'^2) \\\\
+\end{aligned}
+$$
+
+By de Broglie relation,
+
+$$
+\begin{aligned} 
+m_e^2v^2 &= h^2(\frac{1}{\lambda^2} - \frac{2}{\lambda\lambda'}\cos{\theta} + \frac{1}{\lambda'^2}) \\\\
 \end{aligned}
 $$
 
 Conserving energy before and after collision,
 
 $$
-\begin{aligned} 
-h\nu + m_ec^2 &= \sqrt{m_e^2c^4 + (m_ev)^2c^2} + h\nu' \\\\\
-h(\nu-\nu') + m_ec^2 &= \sqrt{m_e^2c^4 + (m_ev)^2c^2} \\\\\
-h^2(\nu-\nu')^2 + 2h(\nu-\nu')m_ec^2 + m_e^2c^4 &= m_e^2c^4 + (m_ev)^2c^2 \\\\\
-h^2(\nu-\nu')^2 + 2h(\nu-\nu')m_ec^2 &= (m_ev)^2c^2 \\\\\
-\end{aligned}
+\begin{gather} 
+h\nu + m_ec^2 = \sqrt{m_e^2c^4 + (m_ev)^2c^2} + h\nu' \\\\\
+\implies h(\nu-\nu') + m_ec^2 = \sqrt{m_e^2c^4 + (m_ev)^2c^2} \\\\\
+\implies h^2(\nu-\nu')^2 + 2h(\nu-\nu')m_ec^2 = (m_ev)^2c^2 \\\\\
+\end{gather}
 $$
-Substituting the $(m_ev)^2c^2$ from the previous equation,
+
+Substitute $(m_ev)^2$,
 
 $$
+\begin{aligned}
+h^2(\nu-\nu')^2 &+ 2h(\nu-\nu')m_ec^2 \\\\
+&= h^2(\frac{1}{\lambda^2} - \frac{2}{\lambda\lambda'}\cos{\theta} + \frac{1}{\lambda'^2})c^2 \\\\
+&= h^2(\nu^2 - 2\nu\nu'\cos{\theta} + \nu'^2) \\\\
+\end{aligned}
+$$
+
+Expand along both sides and cancel,
+
+$$
+\require{cancel}
+\begin{aligned}
+\cancel{h^2\nu^2} - 2h^2\nu\nu' & + \cancel{h^2\nu'^2} + 2h(\nu-\nu')m_ec^2 \\\\
+=& \cancel{h^2\nu^2} - 2h^2\nu\nu'\cos{\theta} + \cancel{h^2\nu'^2} \\\\
+\implies 2h(\nu-\nu')m_ec^2 =& \ 2h^2\nu\nu'(1-\cos{\theta})\\\\
+\implies (\frac{c}{\lambda}-\frac{c}{\lambda'})m_ec^2 =& \ \frac{hc^2}{\lambda\lambda'}(1-\cos{\theta})\\\\
+\implies {\lambda' - \lambda \over \lambda\lambda'}m_ec =& \ \frac{h}{\lambda\lambda'}(1-\cos{\theta})\\\\
+\implies \lambda' - \lambda  =& \ \frac{h}{m_ec}(1-\cos{\theta})\\\\
+\end{aligned}
+$$
+
+<!-- $$
 \begin{aligned}
 h^2(\nu-\nu')^2 + 2h(\nu-\nu')m_ec^2 &= h^2(\nu^2 - 2\nu\nu'\cos{\theta} + \nu'^2) \\\\
 h^2(\nu^2-2\nu\nu'+\nu'^2) + 2h(\nu-\nu')m_ec^2 &= h^2(\nu^2 - 2\nu\nu'\cos{\theta} + \nu'^2) \\\\
@@ -57,7 +94,7 @@ h^2(\nu^2-2\nu\nu'+\nu'^2) + 2h(\nu-\nu')m_ec^2 &= h^2(\nu^2 - 2\nu\nu'\cos{\the
 (\lambda' - \lambda)m_ec^2 &= hc(1-\cos{\theta}) \\\\
 \lambda' - \lambda &= \frac{h}{m_ec}(1-\cos{\theta}) \\\\
 \end{aligned}
-$$
+$$ -->
 
 As the term $(1-\cos{\theta})$ is always positive, the outgoing photon always has the greater wavelength $\Delta \lambda > 0$,
 

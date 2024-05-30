@@ -3,10 +3,17 @@ title: crow physics
 layout: base 
 ---
 
+<p>
+    Crow Physics is a collection of pages covering the content of the undergdaduate degree in physics at the University of Delhi.
+</p>
+
+<br>
+
 <ul>
     {%- for course in collections.course -%}
         <li>
             <a href="{{course.url}}">{{course.data.title}}</a>
+            <span id="note">({{course.data.courseStatus}})</span>
         </li>
     {%- endfor -%}
 </ul>

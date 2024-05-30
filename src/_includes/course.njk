@@ -11,11 +11,11 @@ layout: 'base'
 {%-set courseContent = collections[courseCode] -%}
 
 <ul>
-    {%- for topic in courseContent -%}
+    {%- for topic in courseContent | sort(false, false, "data.topicId") -%}
     {%- if topic.data.tags.includes('topic') -%}
         <li><a href="{{topic.url}}">{{topic.data.title}}</a>
         <ul>
-            {% for page in courseContent %}
+            {% for page in courseContent | sort(false, false, "data.pageId")%}
             {% if page.data.tags.includes('page') and page.data.topicId == topic.data.topicId%}
                 <li><a href="{{page.url}}">{{page.data.title}}</a></li>
             {% endif%}
