@@ -9,19 +9,18 @@ layout: 'base'
 <h2>{{title}}</h2>
 
 <div class="page-links">
-    {%for page in collections.page | sort(false, false, "data.pageId")%}
-    {%if page.data.pageId == (pageId-1) and page.data.topicId == topicId and page.data.tags[0]==tags[0] %}
+    {%set pages = collections[tags[0]] | selectOnly('page') | hasId('topic', topicId)%}
 
-        <a href="{{page.url}}" class="prevlink"> << {{page.data.title}}</a>    
+    {%set prevpage = pages | hasId('page', pageId - 1) | first%}
+    {%set nextpage = pages | hasId('page', pageId + 1) | first%}
 
-    {%endif%}
+    {% if prevpage%}
+    <a href="{{prevpage.url}}" class="prevlink"> << {{prevpage.data.title}}</a>
+    {% endif %}
 
-    {%if page.data.pageId == (pageId+1) and page.data.topicId == topicId and page.data.tags[0]==tags[0]%}
-
-        <a href="{{page.url}}" class="nextlink">{{page.data.title}} >> </a>
-
-    {%endif%}
-    {%endfor%}
+    {% if nextpage %}
+    <a href="{{nextpage.url}}" class="nextlink">{{nextpage.data.title}} >> </a>
+    {% endif %}
 </div>
 
 {{content | safe}}

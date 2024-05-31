@@ -11,10 +11,15 @@ module.exports = function (eleventyConfig) {
         });
     });
 
-    eleventyConfig.addFilter('withTopic', function(collection, topicId) {
+    eleventyConfig.addFilter('hasId', function(collection, type, id) {
         return collection.filter(item => {
-          if (item.data && item.data.topicId) {
-            return item.data.topicId === topicId;
+          if (type == 'topic'){
+              if (item.data && item.data.topicId)
+                  return item.data.topicId === id;
+          }
+          else if (type == 'page'){
+            if (item.data && item.data.pageId)
+                return item.data.pageId === id;
           }
           return false;
         });

@@ -13,7 +13,7 @@ layout: 'base'
 <ul>
 {% for topic in topics %}
 
-    {%set pages = collections[courseCode] | selectOnly('page') | withTopic(topic.data.topicId) | sort(false, false, "data.pageId") %}
+    {%set pages = collections[courseCode] | selectOnly('page') | hasId('topic', topic.data.topicId) | sort(false, false, "data.pageId") %}
 
     <li><a href="{{topic.url}}">{{topic.data.title}}
         <ul>

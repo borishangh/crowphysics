@@ -2,14 +2,15 @@
 layout: 'base' 
 ---
 <h3>{{title}}</h3>
+
+{{content | safe}}
+
+{%set pages = collections[tags[0]] | selectOnly('page') | hasId('topic', topicId)%}
+
 <ul>
-    {%- for page in collections.page | sort(false, false, "data.pageId") -%}
-    {%- if page.data.topicId == topicId and page.data.tags[0] == tags[0] -%}
-
-        <li><a href="{{page.url}}">{{page.data.title}}</a></li>
-
-    {%- endif -%}
+    {%- for page in pages | sort(false, true, "data.pageId") -%}
+    <li><a href="{{page.url}}">{{page.data.title}}</a></li>
     {%- endfor -%}
 </ul>
-<br>
-<a href="../"><< back to course</a>
+
+<br><a href="../"><< back to course</a>
