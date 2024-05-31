@@ -8,27 +8,19 @@ layout: 'base'
 
 {{content | safe}}
 
-{%-set courseContent = collections[courseCode] -%}
-
 {%-set topics = collections[courseCode] | selectOnly('topic') | sort(false, false, "data.topicId") -%}
 
-{% for topic in topics %}
-<p>{{topic.data.title}}</p>
-
-{%endfor%}
-
 <ul>
-    {%- for topic in courseContent | sort(false, false, "data.topicId") -%}
-    {%- if topic.data.tags.includes('topic') -%}
-        <li><a href="{{topic.url}}">{{topic.data.title}}</a>
+{% for topic in topics %}
+
+    {%set pages = collections[courseCode] | selectOnly('page') | withTopic(topic.data.topicId) | sort(false, false, "data.pageId") %}
+
+    <li><a href="{{topic.url}}">{{topic.data.title}}
         <ul>
-            {% for page in courseContent | sort(false, false, "data.pageId")%}
-            {% if page.data.tags.includes('page') and page.data.topicId == topic.data.topicId%}
-                <li><a href="{{page.url}}">{{page.data.title}}</a></li>
-            {% endif%}
-            {% endfor %}
+            {%for page in pages%}
+            <li><a href="{{page.url}}">{{page.data.title}}</a></li>
+            {%endfor%}
         </ul>
-        </li>
-    {%- endif -%}
-    {%- endfor -%}
+    </li>
+{%endfor%}
 </ul>
