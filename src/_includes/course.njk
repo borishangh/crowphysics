@@ -10,6 +10,13 @@ layout: 'base'
 
 {%-set courseContent = collections[courseCode] -%}
 
+{%-set topics = collections[courseCode] | selectOnly('topic') | sort(false, false, "data.topicId") -%}
+
+{% for topic in topics %}
+<p>{{topic.data.title}}</p>
+
+{%endfor%}
+
 <ul>
     {%- for topic in courseContent | sort(false, false, "data.topicId") -%}
     {%- if topic.data.tags.includes('topic') -%}
